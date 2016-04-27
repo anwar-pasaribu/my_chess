@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/fl_cell"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:contentDescription="@string/desc_imageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/ib_cellButton"
+            android:layout_gravity="left|top"
+            android:clickable="true"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"/>
+    </FrameLayout>
+</LinearLayout>
