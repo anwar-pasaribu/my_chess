@@ -140,25 +140,10 @@ public class MainActivity extends Activity {
     }
     
     private void aturUlangGambar(){
-    	for(int i=1;i<=8;i++){
-    		for(int j=0;j<8;j++){
-    			String posisi = Character.toString((char)(j+97))+String.valueOf(i);
-    			int resID = getResources().getIdentifier(posisi, "id", getPackageName());
-        		gambar = (ImageView) findViewById(resID);
-    			if(i%2==0){
-    				if(j%2==0)
-                		gambar.setImageResource(R.drawable.white_square);
-    				else
-                		gambar.setImageResource(R.drawable.black_square);
-    			}
-    			else{
-    				if(j%2==0)
-                		gambar.setImageResource(R.drawable.black_square);
-    				else
-                		gambar.setImageResource(R.drawable.white_square);
-    			}
-    		}
-    	}
+    	for (int indexTemp = 0; indexTemp < listImageButton.size(); indexTemp++) {
+            int file = getResources().getIdentifier("trans", "drawable", getPackageName());
+            listImageButton.get(indexTemp).setImageResource(file);
+        }
     }
     
     private String getNamaFile(char bidak){
